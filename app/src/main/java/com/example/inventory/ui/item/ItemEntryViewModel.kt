@@ -22,10 +22,15 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import com.example.inventory.data.Item
 import java.text.NumberFormat
-import com.example.inventory.data.ItemsRepository
 
-class ItemEntryViewModel(private val itemsRepository: ItemsRepository) : ViewModel() {
+/**
+ * View Model to validate and insert items in the Room database.
+ */
+class ItemEntryViewModel : ViewModel() {
 
+    /**
+     * Holds current item ui state
+     */
     var itemUiState by mutableStateOf(ItemUiState())
         private set
 
